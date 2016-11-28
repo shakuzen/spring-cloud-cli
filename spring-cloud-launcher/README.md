@@ -14,7 +14,7 @@ Install Spring CLI first: https://github.com/spring-cloud/spring-cloud-cli/blob/
 $ spring cloud
 ```
 
-Currently starts configserver, eureka, h2 (db server), hystrixdashboard and kafka. [Here](https://github.com/spring-cloud/spring-cloud-cli/blob/devtools/spring-cloud-launcher/spring-cloud-launcher-deployer/src/main/resources/cloud.yml) is the full configuration.
+Currently starts configserver, dataflow, eureka, h2 (db server), hystrixdashboard and kafka. [Here](spring-cloud-launcher-deployer/src/main/resources/cloud.yml) is the full configuration.
 
 ### Configuring
 
@@ -38,9 +38,9 @@ spring:
 
 The `name` attribute is required. If `waitUntilStarted` is true, Launcher will block until the application has reached the `deployed` state. Before commands are deployed, the list is sorted using Spring's `OrderComparator`. In the above case, `configserver` is deployed before any other app is deployed. Currently only `maven:` coordinates and standard Spring Resources (`file:`, etc...) are supported. 
 
-You can also select from the [predefined deployables](https://github.com/spring-cloud/spring-cloud-cli/blob/devtools/spring-cloud-launcher/spring-cloud-launcher-deployer/src/main/resources/cloud.yml). For example to run Spring Cloud Data Flow execute:
+You can also select from the [predefined deployables](spring-cloud-launcher-deployer/src/main/resources/cloud.yml). For example to run Spring Cloud Data Flow execute:
 ```
-spring cloud eureka,configserver
+spring cloud dataflow
 ```
 
 ### Config Server git uri
